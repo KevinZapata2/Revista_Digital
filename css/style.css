@@ -1,0 +1,635 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Fuzzy+Bubbles:wght@400;700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #235e86 #1b2242;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1b2242;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #235e86;
+  border-radius: 10px;
+  border: 2px inset #ffda9d;
+}
+
+/* ===== End Scrollbar CSS ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* =============== Main Banner =============== */
+
+.section_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main_banner {
+  background: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  filter: brightness(0.5);
+}
+
+.banner_page_title {
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  position: absolute;
+  font-family: "Fasthand", cursive;
+  letter-spacing: 5;
+  font-size: 3rem;
+}
+
+header {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 5%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+header .logo_header {
+  color: #fff;
+  font-family: "Fasthand", cursive;
+  letter-spacing: 5;
+}
+
+header .logo_header .logo_banner_highlight {
+  color: #e94560;
+  font-weight: bolder;
+}
+
+header .menu_header {
+  list-style: none;
+  display: inline-block;
+}
+
+header .menu_header li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+header .menu_header li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .menu_header li a:hover {
+  color: #e94560;
+  text-decoration: none;
+}
+
+header .menu_header li .active {
+  color: #e94560;
+  border-bottom: 2px solid #e94560;
+}
+
+.section_banner .go_to_banner {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  animation: arrow_banner_animation 1s ease-in-out infinite;
+}
+
+@keyframes arrow_banner_animation {
+  0% {
+    bottom: 1.5rem;
+  }
+
+  50% {
+    bottom: 2rem;
+  }
+
+  100% {
+    bottom: 1.5rem;
+  }
+}
+
+/* =============== End Main Banner =============== */
+
+/* =============== About Section =============== */
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  flex-wrap: wrap;
+}
+
+#about .left-about {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#about .left-about .img_about {
+  background: url("https://images.unsplash.com/photo-1515825838458-f2a94b20105a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#about .right_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+  padding: 10%;
+}
+
+#about .right_about .about_title {
+  color: #121212;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+#about .right_about .paragraph {
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+/* =============== End About Section =============== */
+
+/* =============== Footer =============== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+footer .row_one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #04293a;
+  padding: 2%;
+  color: #fff;
+}
+
+footer .row_one .logo_footer {
+  color: #fff;
+  font-family: "Fasthand", cursive;
+  letter-spacing: 5;
+}
+
+footer .row_one .logo_footer span {
+  color: #e94560;
+  font-weight: bolder;
+}
+
+footer .row_one .menu_footer .title_menu_footer {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer .row_one .menu_footer {
+  list-style: none;
+}
+
+footer .row_one .menu_footer li {
+  margin-bottom: 0.5rem;
+}
+
+footer .row_one .menu_footer li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+footer .row_one .menu_footer li a:hover {
+  text-decoration: none;
+  color: #e94560;
+}
+
+footer .row_two {
+  background-color: #041c32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.65rem;
+}
+
+footer .row_two .copyRight {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-left: 1.5rem;
+}
+
+footer .row_two .made-by {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-right: 2.5rem;
+}
+
+footer .row_two .made-by span {
+  color: #e94560;
+  font-weight: 700;
+}
+
+/* =============== End Footer =============== */
+
+/* =============== Contact Page =============== */
+
+/* =============== Contact Main =============== */
+
+.main_contact_page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1491466424936-e304919aada7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  flex-wrap: wrap-reverse;
+}
+
+.form_contact_container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.title_contact {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 5;
+  padding: 1rem;
+}
+
+.form_contact_container button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e94560;
+  background-color: transparent;
+  color: #e94560;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form_contact_container button:hover {
+  background-color: #e94560;
+  color: #fff;
+}
+
+/* =============== Form =============== */
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #e94560;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  cursor: text;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-control input:focus + label,
+.form-control input:valid + label {
+  color: #e94560;
+  transform: translateY(-25px);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2;
+}
+
+/* =============== End Form =============== */
+
+/* =============== Clock =============== */
+
+.clock::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: -999;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://i.ibb.co/TRMzNQF/5054.png");
+  filter: invert(100%);
+  background-size: cover;
+  /* border: 4px solid #f6e6de; */
+  border: 4px solid #fbd6c5;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.05),
+    inset 0 -15px 15px rgba(0, 0, 0, 0.05), 0 -15px 15px rgba(0, 0, 0, 0.05),
+    inset 0 15px 15px rgba(255, 255, 255, 0.3);
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: inset 0 0 3px 1px rgba(255, 255, 255, 0.6);
+}
+
+.clock #hour,
+.clock #minute,
+.clock #second {
+  position: absolute;
+}
+
+.clock #hour,
+#hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock #minute,
+#min {
+  width: 190px;
+  height: 190px;
+}
+
+.clock #second,
+#sec {
+  width: 230px;
+  height: 230px;
+}
+
+#hr,
+#min,
+#sec {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  filter: none !important;
+}
+
+#hr:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #00efa1;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+#min:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #134c9a;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+#sec:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #000;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 2px 3px 5px 3px rgba(255, 255, 255, 0.5);
+}
+
+#digital {
+  color: #fff;
+  margin-top: 1rem;
+  text-align: denter;
+}
+
+/* =============== End Clock =============== */
+
+/* =============== End Contact Main =============== */
+
+/* =============== End Contact Page =============== */
+
+/* =============== Gallery Page =============== */
+
+.main_gallery_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
+}
+.digitalClockGallery {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap");
+
+.galleryContainer {
+  display: flex;
+  height: fit-content;
+  height: 100vh;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.5;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px;
+  transition: flex 0.7s;
+}
+
+.texts {
+  opacity: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding: 100px 50px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease-in 0.4s;
+  font-family: "Baloo 2", cursive;
+  box-shadow: inset 21px 22px 21px -11px rgba(255, 255, 255, 0.3);
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  cursor: auto;
+}
+
+.panel.active .texts {
+  opacity: 1;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+#restart {
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+  cursor: pointer;
+}
+
+#restart svg {
+  height: 29px;
+  width: 29px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+}
+
+/* =============== EndGallery Page =============== */
+
+@media only screen and (max-width: 64rem) {
+  .digitalClockGallery {
+    font-size: 10rem;
+  }
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 5%;
+  }
+  header .menu_header li {
+    padding: 0 0.5rem;
+  }
+
+  .banner_page_title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #about .right_about {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #about .left-about {
+    width: 100%;
+    max-height: 10rem;
+    align-items: center;
+  }
+  #about .left-about .img_about {
+    background-size: cover;
+    width: 100%;
+    background-position: bottom;
+    height: 100%;
+  }
+
+  .digitalClockGallery {
+    font-size: 5rem;
+  }
+}

@@ -1,0 +1,118 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/1a7ac0c558.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <span class="logo_header">Luis <span class="logo_banner_highlight">Correa</span></span>
+        <ul class="menu_header" id="menu_header">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./gallery.html">Galery</a></li>
+            <li><a href="./contacto.html" class="active">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="main_contact_page">
+
+        <div class="form_contact_container">
+            <h1 class="title_contact">
+                Contact Us
+            </h1>
+            <form action="#" class="form_container">
+                <div class="form-control">
+                    <input type="text" name="" id="first-name" required>
+                    <label for="first-name">First Name</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="" id="last-name" required>
+                    <label for="last-name">Last Name</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="" id="phone" required>
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="form-control">
+                    <input type="email" name="" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+
+        <div class="clock">
+            <div id="hour">
+                <div id="hr"></div>
+            </div>
+            <div id="minute">
+                <div id="min"></div>
+            </div>
+            <div id="second">
+                <div id="sec"></div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="row_one">
+            <ul class="menu_footer">
+                <li class="title_menu_footer">navigation</li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+            <span class="logo_footer">Luis <span>Correa</span></span>
+            <ul class="menu_footer redes_sociales">
+                <li class="title_menu_footer">Redes Sociales</li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            </ul>
+        </div>
+        <div class="row_two">
+            <span class="copyRight">
+                Ⓒ Luis Correa 2022
+            </span>
+            <span class="made-by">
+                Luis Angel <span>Correa Ramirez</span>
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        const deg = 6;
+        const hr = document.querySelector("#hr");
+        const min = document.querySelector("#min");
+        const sec = document.querySelector("#sec");
+
+        const digitalClock = document.querySelector("#digital")
+
+        setInterval(() => {
+            let day = new Date();
+            let hour = day.getHours();
+            let minute = day.getMinutes();
+            let second = day.getSeconds();
+            hr.style.transform = `rotateZ(${(hour * 30) + (minute * deg / 12)}deg)`;
+            min.style.transform = `rotateZ(${minute * deg}deg)`;
+            sec.style.transform = `rotateZ(${second * deg}deg)`;
+            digital.innerText = `${formatHour(hour)} : ${addZero(minute)} : ${addZero(second)}`
+        })
+
+        const formatHour = (hour) => {
+            return hour > 12 ? addZero(hour - 12) : hour
+        }
+
+        const addZero = (number) => {
+            return number < 10 ? `0${number}` : number
+        }
+    </script>
+</body>
+
+</html>
