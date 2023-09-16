@@ -69,13 +69,15 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100vw;
-  padding: 10px 5%;
+  flex-direction: column;
+  width: 10%;
+  height: 100vh;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -93,12 +95,17 @@ header .logo_header .logo_banner_highlight {
 
 header .menu_header {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 0;
+  gap: 1rem;
 }
 
 header .menu_header li {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 header .menu_header li a {
